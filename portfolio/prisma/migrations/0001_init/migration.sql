@@ -34,4 +34,3 @@ CREATE TABLE "Admin" (
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Admin_username_key" ON "Admin"("username");
-
