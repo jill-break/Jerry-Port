@@ -215,7 +215,7 @@ export default function AdminDashboard() {
                                                 value={formData.imageUrl}
                                                 onChange={(e) => setFormData({ ...formData, imageUrl: e.target.value })}
                                                 className="input-glass"
-                                                placeholder="/images/project.jpg or https://..."
+                                                placeholder="Pintrest link: https://..."
                                             />
                                         </div>
                                         <div>
@@ -226,6 +226,7 @@ export default function AdminDashboard() {
                                                 value={formData.projectUrl}
                                                 onChange={(e) => setFormData({ ...formData, projectUrl: e.target.value })}
                                                 className="input-glass"
+                                                placeholder="Behance link: https://..."
                                             />
                                         </div>
                                         <div className="flex gap-4 pt-4">
