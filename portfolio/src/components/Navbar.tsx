@@ -59,12 +59,6 @@ export default function Navbar() {
                             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[var(--neon-cyan)] to-[var(--neon-purple)] transition-all duration-300 group-hover:w-full" />
                         </a>
                     ))}
-                    <Link
-                        href="/admin"
-                        className="btn-secondary text-sm px-6 py-2"
-                    >
-                        Admin
-                    </Link>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -118,12 +112,6 @@ export default function Navbar() {
                                     {link.label}
                                 </a>
                             ))}
-                            <Link
-                                href="/admin"
-                                className="mx-6 mt-4 btn-primary text-center text-sm"
-                            >
-                                Admin Dashboard
-                            </Link>
                         </div>
                     </motion.div>
                 )}
