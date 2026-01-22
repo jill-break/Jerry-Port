@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import Footer from '@/components/Footer';
 import React from 'react';
+import '@testing-library/jest-dom';
 
 interface MockProps {
     children?: React.ReactNode;
