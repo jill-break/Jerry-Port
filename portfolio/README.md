@@ -2,7 +2,22 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+### Database Setup (PostgreSQL)
+
+This project uses **PostgreSQL** as the database. For local development, you can run PostgreSQL using Docker:
+
+```bash
+# Start PostgreSQL container
+docker compose up db -d
+
+# Run database migrations
+npx prisma migrate dev
+
+# Seed the database (optional)
+npm run db:seed
+```
+
+### Running the Development Server
 
 ```bash
 npm run dev
