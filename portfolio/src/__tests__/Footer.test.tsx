@@ -1,19 +1,27 @@
 import { render, screen } from '@testing-library/react';
 import Footer from '@/components/Footer';
+import React from 'react';
+
+interface MockProps {
+    children?: React.ReactNode;
+    [key: string]: unknown;
+}
 
 // Mock framer-motion
 jest.mock('framer-motion', () => ({
     motion: {
-        div: ({ children, ...props }: any) => <div {...props}>{children}</div>,
-        footer: ({ children, ...props }: any) => <footer {...props}>{children}</footer>,
-        a: ({ children, ...props }: any) => <a {...props}>{children}</a>,
-        span: ({ children, ...props }: any) => <span {...props}>{children}</span>,
+        div: ({ children, ...props }: MockProps) => <div {...props}>{children}</div>,
+        footer: ({ children, ...props }: MockProps) => <footer {...props}>{children}</footer>,
+        a: ({ children, ...props }: MockProps) => <a {...props}>{children}</a>,
+        span: ({ children, ...props }: MockProps) => <span {...props}>{children}</span>,
     },
 }));
 
 // Mock next/link
 jest.mock('next/link', () => {
-    return ({ children, href }: any) => <a href={href}>{children}</a>;
+    return function MockLink({ children, href }: { children: React.ReactNode; href: string }) {
+        return <a href={href}>{children}</a>;
+    };
 });
 
 describe('Footer Component', () => {

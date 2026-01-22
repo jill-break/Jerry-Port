@@ -29,7 +29,7 @@ export default function Contact() {
             } else {
                 throw new Error('Failed to send message');
             }
-        } catch (error) {
+        } catch (_error) {
             setStatus('error');
             setTimeout(() => setStatus('idle'), 5000);
         }

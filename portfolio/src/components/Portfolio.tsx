@@ -72,7 +72,7 @@ export default function Portfolio() {
                         setProjects(data);
                     }
                 }
-            } catch (error) {
+            } catch (_error) {
                 console.log('Using fallback projects');
             } finally {
                 setIsLoading(false);

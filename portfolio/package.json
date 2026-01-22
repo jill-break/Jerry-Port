@@ -12,11 +12,11 @@
     "test:coverage": "jest --coverage",
     "postinstall": "prisma generate",
     "db:migrate": "prisma migrate dev",
-    "db:seed": "npx tsx prisma/seed.ts",
+    "db:seed": "node prisma/seed.mjs",
     "db:reset": "prisma migrate reset --force"
   },
   "prisma": {
-    "seed": "npx tsx prisma/seed.ts"
+    "seed": "node prisma/seed.mjs"
   },
   "dependencies": {
     "@prisma/client": "^5.22.0",
